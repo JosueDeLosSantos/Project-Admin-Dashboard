@@ -399,7 +399,7 @@
     gap: 10px;
   }
 
-  .main-logo > div > p {
+  .main-logo > div > p, .p-title2 {
     font-size: 1.3rem;
     font-weight: 600;
   }
@@ -416,7 +416,7 @@
     width: 2.3rem;
   }
 
-  .icons {
+  .icons, form img {
     width: 1.1rem;
   }
 
@@ -427,6 +427,84 @@
   .containers {
     display: flex;
     flex-direction: column;
+    margin: 15px;
   }
 
-  
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 5px 30px 5px 15px;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .user-greeting, form {
+    display: flex;
+    gap: 15px;
+  }
+
+  form > .search-image {
+   padding-top: 1%;
+  }
+
+  .greeting-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  input[type=search] {
+    background-color: rgb(226 232 240);
+    border: 1px solid rgb(226 232 240);
+    border-radius: 20px;
+    padding: 4px 10px 4px 10px;
+    font-size: 0.9rem;
+    width: 500px;
+    height: 1.5rem;
+  }
+
+  input[type=search]:focus-visible {
+    outline: none;
+  }
+
+  .user-notification {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 15px;
+  }
+
+  .p-title1 {
+    font-size: 0.7rem;
+  }
+
+  .user-options {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    align-items: center;
+  }
+
+  .user-options > input {
+    background-color: rgba(25, 146, 212, 1);
+    color: white;
+    border: 1px solid rgba(25, 146, 212, 1);
+    height: 30px;
+    width: 80px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
