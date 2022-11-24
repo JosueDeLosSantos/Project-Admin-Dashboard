@@ -404,6 +404,14 @@
     font-weight: 600;
   }
 
+  .main-logo {
+    margin-bottom: 40px;
+  }
+
+  .sidebar-ul1 {
+    margin-bottom: 55px;
+  }
+
   .main-icon {
     width: 2.3rem;
   }
