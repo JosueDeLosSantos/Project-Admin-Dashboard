@@ -412,12 +412,21 @@
     margin-bottom: 55px;
   }
 
-  .main-icon {
+  .main-icon, .second-icons {
     width: 2.3rem;
   }
 
   .icons {
     width: 1.1rem;
+  }
+
+  .greeting-icon {
+    width: 3.3rem;
+  }
+
+  .containers {
+    display: flex;
+    flex-direction: column;
   }
 
   
