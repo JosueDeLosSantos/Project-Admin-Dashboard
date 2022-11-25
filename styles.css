@@ -357,8 +357,10 @@
 :root {
   --sidebar-blue: rgba(25, 146, 212, 1);
   --main-bgcolor: rgb(226 232 240);
-  --cards-bcolor: rgb(233 185 110);
+  --cards-pcolor: rgb(99 99 99);
   --cards-gap: 20px;
+  --card-bradius: 6px;
+  --common-p: 0.7rem;
 }
 
 @font-face {
@@ -507,8 +509,8 @@
     padding-right: 15px;
   }
 
-  .p-title1, .card-info > p {
-    font-size: 0.7rem;
+  .p-title1 {
+    font-size: var(--common-p);
   }
 
   .user-options {
@@ -561,7 +563,7 @@ main {
 
 .pcard {
   background-color: white;
-  border-radius: 6px;
+  border-radius: var(--card-bradius);
   border-left: 6px solid rgb(233 185 110);
   padding: 25px 15px 20px 15px;
   display: flex;
@@ -584,7 +586,76 @@ main {
   gap: 20px;
 }
 
+.card-info > p {
+  color: var(--cards-pcolor);
+  font-size: var(--common-p);
+}
+
 
 h4 {
   font-size: 0.9rem;
 }
+
+
+/***announcements***/
+
+.announcements {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-bgcolor);
+}
+
+.announcements-title, .trending-title {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--main-bgcolor);
+}
+
+.news > p {
+  font-size: 0.6rem;
+  color: var(--cards-pcolor);
+}
+
+.news:first-child, .news:nth-child(2) {
+  border-bottom: 1px solid var(--main-bgcolor);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+h5 {
+  font-size: 0.7rem;
+}
+
+
+/***Announcements and trending***/
+
+.acard1 {
+  background-color: white;
+  width: 75%;
+  padding: 20px;
+  border-radius: var(--card-bradius);
+}
+
+.acard2 {
+  background-color: white;
+  width: 75%;
+  padding: 20px;
+  border-radius: var(--card-bradius);
+  display: flex;
+  flex-direction: column;
+  gap: 11px; 
+}
+
+.trending-users {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.users-info > P {
+  font-size: var(--common-p);
+  color: var(--cards-pcolor);
+}
+
