@@ -354,6 +354,13 @@
     padding: 0;
 }
 
+:root {
+  --sidebar-blue: rgba(25, 146, 212, 1);
+  --main-bgcolor: rgb(226 232 240);
+  --cards-bcolor: rgb(233 185 110);
+  --cards-gap: 20px;
+}
+
 @font-face {
   font-family: Roboto;
   src: url(fonts/Roboto/Roboto-Regular.ttf);
@@ -374,11 +381,12 @@
   /***Sidebar***/
 
   aside {
-    background-color: rgba(25, 146, 212, 1);
+    background-color: var(--sidebar-blue);
     color: white;
     padding: 15px;
     font-family:'Roboto';
     font-weight: 600;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -397,6 +405,10 @@
 
   ul {
     list-style-type: none;
+  }
+
+  .sidebar-ul1 {
+    margin-bottom: 55px;
   }
 
 
@@ -418,10 +430,6 @@
 
   .main-logo {
     margin-bottom: 40px;
-  }
-
-  .sidebar-ul1 {
-    margin-bottom: 55px;
   }
 
   .main-icon, .second-icons {
@@ -479,8 +487,8 @@
   }
 
   input[type=search] {
-    background-color: rgb(226 232 240);
-    border: 1px solid rgb(226 232 240);
+    background-color: var(--main-bgcolor);
+    border: 1px solid var(--main-bgcolor);
     border-radius: 20px;
     padding: 4px 10px 4px 10px;
     font-size: 0.9rem;
@@ -499,7 +507,7 @@
     padding-right: 15px;
   }
 
-  .p-title1 {
+  .p-title1, .card-info > p {
     font-size: 0.7rem;
   }
 
@@ -511,9 +519,9 @@
   }
 
   .user-options > input {
-    background-color: rgba(25, 146, 212, 1);
+    background-color: var(--sidebar-blue);
     color: white;
-    border: 1px solid rgba(25, 146, 212, 1);
+    border: 1px solid var(--sidebar-blue);
     height: 30px;
     width: 80px;
     border-radius: 20px;
@@ -527,7 +535,7 @@
 
 main {
   display: grid;
-  grid-template: 100vh / 3fr 1fr;
+  grid-template: 100vh / 2.5fr 1fr;
   grid-template-areas: "projects announcements";
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
@@ -544,5 +552,39 @@ main {
 
 .project-cards {
   display: grid;
-  grid-template: repeat(3, minmax(150px, 1fr) / repeat(auto-fit, 300px));
+  height: 100vh;
+  grid-template: repeat(3, minmax(100px, 160px)) / repeat(auto-fit, 290px);
+  justify-content: center;
+  gap: var(--cards-gap);
+  background-color: var(--main-bgcolor);
+}
+
+.pcard {
+  background-color: white;
+  border-radius: 6px;
+  border-left: 6px solid rgb(233 185 110);
+  padding: 25px 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects-title {
+  padding-left: 25px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--main-bgcolor);
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+
+h4 {
+  font-size: 0.9rem;
 }
